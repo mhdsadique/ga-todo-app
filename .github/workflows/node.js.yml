@@ -12,16 +12,26 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: "16"
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: "16"
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+  deploy:
+  runs-on: ubundu-latest
+  needs: build
+  environment: 
+       name: githup-pages
+       url: ${{steps.deployment.outputs.page_url}}
+    steps:
+       -name: Deploy to Github pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
 
 
