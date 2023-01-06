@@ -1,3 +1,14 @@
 {
-  "todos": []
+  "todos": [
+    {
+      "value": "1",
+      "isCompleted": false,
+      "id": 1
+    },
+    {
+      "value": "2",
+      "isCompleted": false,
+      "id": 2
+    }
+  ]
 }
