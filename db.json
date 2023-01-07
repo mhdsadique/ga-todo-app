@@ -14,6 +14,16 @@
       "value": "svs",
       "isCompleted": false,
       "id": 3
+    },
+    {
+      "value": "run",
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "value": "react",
+      "isCompleted": false,
+      "id": 5
     }
   ]
 }
