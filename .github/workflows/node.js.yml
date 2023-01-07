@@ -3,14 +3,11 @@ name: Github Action No. 2
 on:
   push:
     branches: ["main"]
-  # Allos us to run worflow from UI
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -1,4 +1,3 @@
-import React from "react";
 
 const TodoInput = ({ value, handleChange, handleSubmit }) => {
   const submit = (e) => {
